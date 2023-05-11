@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: harbor.prod.viettq.com/demo/my-app
+  repository: vietchita/demo-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1"
@@ -42,7 +42,7 @@ service:
 
 ingress:
   enabled: true
-  className: "local"
+  className: "nginx"
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
